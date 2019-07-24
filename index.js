@@ -51,15 +51,19 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (let i=0; i<cart.length; i++) {
-    if (cart[i]["itemName"] === item) {
-      delete cart[i];
-    }else {
-      return "That item isn't in your cart."
+    let testArr = []
+    for (let i=0; i<cart.length; i++) {
+      if (item === cart[i]["itemName"]){
+        testArr.push(item)
+      }
+      }       
+      if (testArr.length === 1) {
+        return `You have removed ${testArr[0]} from your cart`
     }
-    
-  }
-}
+    else {
+        return "bruh"
+    }
+  } 
 
 function placeOrder(cardNumber) {
   // write your code here
