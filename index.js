@@ -61,7 +61,7 @@ function removeFromCart(item) {
         return `You have removed ${testArr[0]} from your cart`
     }
     else {
-        return "bruh"
+        return "the item is not in your cart."
     }
   } 
 
